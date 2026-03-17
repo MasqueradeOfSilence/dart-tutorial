@@ -37,7 +37,9 @@ void searchWikipedia(List<String>? arguments)
     // Otherwise, join the arguments into a single string. 
     articleTitle = arguments.join(' ');
   }
-  print("Current article title: $articleTitle");
+  print("Looking up articles about '$articleTitle'. Please wait.");
+  print("Here ya go!");
+  print("(Pretend this is an article about '$articleTitle')");
 }
 
 void printUsage()
@@ -46,4 +48,4 @@ void printUsage()
     "The following commands are valid: 'help', 'version, 'search <ARTICLE-TITLE>'"
   );
 }
-// next step: #7 on tut -- which will also test 6
+// next step: #8 on tut
