@@ -49,4 +49,9 @@ void printUsage()
     "The following commands are valid: 'help', 'version, 'search <ARTICLE-TITLE>'"
   );
 }
+
+Future<String> getWikipediaArticle(String articleTitle) async 
+{
+
+}
 // next step: https://dart.dev/learn/tutorial/async, but also make sure the pause after no params is correct
