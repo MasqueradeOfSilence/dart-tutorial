@@ -52,6 +52,9 @@ void printUsage()
 
 Future<String> getWikipediaArticle(String articleTitle) async 
 {
-
+  final url = Uri.https(
+    "en.wikipedia.org", // Wikipedia API domain
+    "/api/rest_v1/page/summary/$articleTitle" // API path for article summary
+  )
 }
 // next step: https://dart.dev/learn/tutorial/async, but also make sure the pause after no params is correct
