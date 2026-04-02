@@ -56,6 +56,7 @@ Future<String> getWikipediaArticle(String articleTitle) async
     "en.wikipedia.org", // Wikipedia API domain
     "/api/rest_v1/page/summary/$articleTitle" // API path for article summary
   )
+  final response = await http.get(url);
 }
 // next step: https://dart.dev/learn/tutorial/async
 // step 3: Make the HTTP request and handle the response
