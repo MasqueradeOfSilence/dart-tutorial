@@ -62,6 +62,8 @@ Future<String> getWikipediaArticle(String articleTitle) async
   {
     return response.body;
   }
+  // Return an error message if the request failed
+  return 'Error: Failed to fetch article "$articleTitle". Status code: ${response.statusCode}';
 }
 // next step: https://dart.dev/learn/tutorial/async
-// step 3: Make the HTTP request and handle the response
+// Task 4: Integrate the API call into searchWikipedia
