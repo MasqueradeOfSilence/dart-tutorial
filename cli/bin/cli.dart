@@ -30,8 +30,12 @@ void searchWikipedia(List<String>? arguments) async
   if (arguments == null || arguments.isEmpty)
   {
     print("Please provide an article title.");
-    // Await input and provide a default empty string if the input is null.
-    articleTitle = stdin.readLineSync() ?? '';
+    final inputFromStdin = stdin.readLineSync();
+    if (inputFromStdin == null || inputFromStdin.isEmpty)
+    {
+      print('No article title provided. Exiting.');
+    }
+    articleTitle = inputFromStdin; // Exit the function if no valid input
   }
   else
   {
@@ -67,3 +71,4 @@ Future<String> getWikipediaArticle(String articleTitle) async
 }
 // next step: https://dart.dev/learn/tutorial/async
 // Task 4: Integrate the API call into searchWikipedia
+// step: 3, begin, also double check previous
