@@ -43,8 +43,10 @@ void searchWikipedia(List<String>? arguments) async
     articleTitle = arguments.join(' ');
   }
   print("Looking up articles about '$articleTitle'. Please wait.");
-  print("Here ya go!");
-  print("(Pretend this is an article about '$articleTitle')");
+  
+  // Call the API and await the result
+  var articleContent = await getWikipediaArticle(articleTitle);
+  print(articleContent); // Print the full article response (raw JSON for now)
 }
 
 void printUsage()
@@ -70,5 +72,5 @@ Future<String> getWikipediaArticle(String articleTitle) async
   return 'Error: Failed to fetch article "$articleTitle". Status code: ${response.statusCode}';
 }
 // next step: https://dart.dev/learn/tutorial/async
-// Task 4: Integrate the API call into searchWikipedia
-// step: 3, begin, also double check previous
+// Task 5: Update main to call searchWikipedia
+// step: 1
