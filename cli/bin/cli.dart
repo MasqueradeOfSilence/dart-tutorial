@@ -74,4 +74,3 @@ Future<String> getWikipediaArticle(String articleTitle) async
 }
 // next step: https://dart.dev/learn/tutorial/async
 // Task 5: Update main to call searchWikipedia
-// step: 2. also fix cli error
