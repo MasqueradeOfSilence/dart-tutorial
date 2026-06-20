@@ -34,6 +34,7 @@ void searchWikipedia(List<String>? arguments) async
     if (inputFromStdin == null || inputFromStdin.isEmpty)
     {
       print('No article title provided. Exiting.');
+      return;
     }
     articleTitle = inputFromStdin; // Exit the function if no valid input
   }
@@ -61,7 +62,7 @@ Future<String> getWikipediaArticle(String articleTitle) async
   final url = Uri.https(
     "en.wikipedia.org", // Wikipedia API domain
     "/api/rest_v1/page/summary/$articleTitle" // API path for article summary
-  )
+  );
   final response = await http.get(url);
 
   if (response.statusCode == 200)
