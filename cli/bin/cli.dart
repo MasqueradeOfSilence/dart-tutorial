@@ -73,4 +73,4 @@ Future<String> getWikipediaArticle(String articleTitle) async
   return 'Error: Failed to fetch article "$articleTitle". Status code: ${response.statusCode}';
 }
 // next step: https://dart.dev/learn/tutorial/async
-// Task 5: Update main to call searchWikipedia
+// Task 6: run the application
